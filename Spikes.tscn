@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Spikes.gd" type="Script" id=1]
+[ext_resource path="res://spikes.png" type="Texture" id=2]
+
+[node name="Spikes" type="Area2D"]
+position = Vector2( 0, -16 )
+script = ExtResource( 1 )
+
+[node name="Spikes" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -14, 16, -8, -2, -7, -2, -1, 12, 1, 12, 8, -1, 9, -1, 14, 16 )
+
+[connection signal="body_entered" from="." to="." method="_on_Spikes_body_entered"]
