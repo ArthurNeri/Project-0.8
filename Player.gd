@@ -21,7 +21,7 @@ var double_jump = 1
 func _physics_process(delta):
 	reset_scene()
 	apply_gravity()
-	$AnimatedSprite.animation = "Jump"
+	$AnimationPlayer.play("Idle")
 	var input = Vector2.ZERO
 	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 
@@ -33,9 +33,9 @@ func _physics_process(delta):
 #		$AnimatedSprite.animation = "Walk"
 		
 		if input.x > 0:
-			$AnimatedSprite.flip_h = false
+			$AnimationPlayer.flip_h = false
 		elif input.x < 0:
-			$AnimatedSprite.flip_h = true
+			$AnimationPlayer.flip_h = true
 	
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
@@ -43,8 +43,10 @@ func _physics_process(delta):
 			double_jump = 1
 	else:
 		if Input.is_action_just_pressed("ui_up") and double_jump > 0:
+			$AnimationPlayer.play("DoubleJump")
 			velocity.y = DOUBLE_JUMP
 			double_jump -= 1
+			$AnimationPlayer.stop()
 			
 		#$AnimatedSprite.animation = "Jump"
 		if Input.is_action_just_released("ui_up") and velocity.y < JUMP_RELEASE_FORCE:

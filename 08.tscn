@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://PopupMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -6,6 +6,146 @@
 [ext_resource path="res://New Zero Eight.png" type="Texture" id=4]
 [ext_resource path="res://full_hud_bg.png" type="Texture" id=5]
 [ext_resource path="res://hp_bar.png" type="Texture" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.0
+height = 42.0
+
+[sub_resource type="Animation" id=11]
+resource_name = "DoubleJump"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -2.85643e-08, -0.0488928, 0.1, 171168, 3543.14, -0.1, -128004, 0.00229644, 2939.54, -360, 0, 2939.54, 0, -4409.31 ),
+"times": PoolRealArray( 0, 0.4, 0.8 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("AnimationPlayer/AnimatedSprite:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0, 1.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.05, 0.1, 0.2 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer:root_node")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ NodePath("..") ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/AnimatedSprite:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ NodePath("..") ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Walk"
+length = 0.533333
+loop = true
+step = 0.0666667
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.266667 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -27, 0, 0.396, 0.323, 0.543, -25, -0.25, 0, 0.25, 0, -27, -0.25, 0, 0.25, 0, -29, -0.25, 0, 0.25, 0, -31, -0.25, 0, 0.25, 0, -33, -0.25, 0, 0.25, 0, -31, -0.25, 0, 0.25, 0, -29, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("AnimationPlayer/AnimatedSprite:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -360, -0.25, 0, 0.25, 0, -357.5, -0.25, 0, 0.25, 0, -355, -0.25, 0, 0.25, 0, -357.5, -0.25, 0, 0.25, 0, -360, -0.25, 0, 0.25, 0, -2.5, -0.25, 0, 0.25, 0, -5, -0.25, 0, 0.25, 0, -2.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/AnimatedSprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
@@ -15,22 +155,25 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 8.0
-height = 42.0
-
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 2, -29 )
-frames = SubResource( 10 )
-animation = "Jump"
-playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -29 )
 shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/DoubleJump = SubResource( 11 )
+anims/Idle = SubResource( 13 )
+anims/RESET = SubResource( 12 )
+anims/Walk = SubResource( 14 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="AnimationPlayer"]
+position = Vector2( 2, -32.9978 )
+rotation = -0.0505395
+frames = SubResource( 10 )
+animation = "Jump"
+playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 pause_mode = 2
@@ -41,6 +184,7 @@ current = true
 smoothing_speed = 15.0
 
 [node name="Control" parent="Camera2D" instance=ExtResource( 1 )]
+items = [ "Resume", null, 0, false, false, 0, 0, null, "", false, "Configurations", null, 0, false, false, 1, 0, null, "", false, "Menu", null, 0, false, false, 2, 0, null, "", false ]
 
 [node name="Container" type="Container" parent="Camera2D"]
 margin_left = -212.0
