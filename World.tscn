@@ -8,7 +8,7 @@
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -259, -11 )
+position = Vector2( -258, -4 )
 GRAVITY = 28
 ADDITIONAL_FALL_GRAVITY = 30
 

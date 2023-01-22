@@ -9,7 +9,7 @@ export(int) var MAX_SPEED = 300
 export (int) var FRICION = 80
 export (int) var ACCELERATION = 80
 export (int) var GRAVITY = 30
-export (int) var ADDITIONAL_FALL_GRAVITY = 15
+export (int) var ADDITIONAL_FALL_GRAVITY = 25
 #export (int) var ROLL_SPEED = 200
 
 var is_paused = false
@@ -21,21 +21,19 @@ var double_jump = 1
 func _physics_process(delta):
 	reset_scene()
 	apply_gravity()
-	$AnimationPlayer.play("Idle")
+	$AnimatedSprite.play("Jump")
 	var input = Vector2.ZERO
 	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 
 	if input.x == 0:
 		apply_friction()
-#		$AnimatedSprite.animation = "Idle"
 	else:
 		apply_acceleration(input.x)
-#		$AnimatedSprite.animation = "Walk"
 		
 		if input.x > 0:
-			$AnimationPlayer.flip_h = false
+			$AnimatedSprite.flip_h = false
 		elif input.x < 0:
-			$AnimationPlayer.flip_h = true
+			$AnimatedSprite.flip_h = true
 	
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
@@ -43,10 +41,9 @@ func _physics_process(delta):
 			double_jump = 1
 	else:
 		if Input.is_action_just_pressed("ui_up") and double_jump > 0:
-			$AnimationPlayer.play("DoubleJump")
 			velocity.y = DOUBLE_JUMP
 			double_jump -= 1
-			$AnimationPlayer.stop()
+
 			
 		#$AnimatedSprite.animation = "Jump"
 		if Input.is_action_just_released("ui_up") and velocity.y < JUMP_RELEASE_FORCE:
