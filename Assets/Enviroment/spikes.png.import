@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Place Holder(96x96).png-2f92f0bea779d1b5b12064d303a3abb8.stex"
+path="res://.import/spikes.png-7214e8b4d127f59fdfda343b820e8bde.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Place Holder(96x96).png"
-dest_files=[ "res://.import/Place Holder(96x96).png-2f92f0bea779d1b5b12064d303a3abb8.stex" ]
+source_file="res://Assets/Enviroment/spikes.png"
+dest_files=[ "res://.import/spikes.png-7214e8b4d127f59fdfda343b820e8bde.stex" ]
 
 [params]
 

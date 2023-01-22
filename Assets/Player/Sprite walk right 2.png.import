@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Place Holder.png-d22c04e11c6f89f591e287d283695b47.stex"
+path="res://.import/Sprite walk right 2.png-89c714ae1626274de196dc09a895dee1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Place Holder.png"
-dest_files=[ "res://.import/Place Holder.png-d22c04e11c6f89f591e287d283695b47.stex" ]
+source_file="res://Assets/Player/Sprite walk right 2.png"
+dest_files=[ "res://.import/Sprite walk right 2.png-89c714ae1626274de196dc09a895dee1.stex" ]
 
 [params]
 

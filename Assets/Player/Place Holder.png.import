@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grass.png-ff92a3c9a7a270cd183ab32eca376733.stex"
+path="res://.import/Place Holder.png-90f36d7732a6236cbd7de76daf1840ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Grass.png"
-dest_files=[ "res://.import/Grass.png-ff92a3c9a7a270cd183ab32eca376733.stex" ]
+source_file="res://Assets/Player/Place Holder.png"
+dest_files=[ "res://.import/Place Holder.png-90f36d7732a6236cbd7de76daf1840ae.stex" ]
 
 [params]
 
@@ -32,4 +32,4 @@ process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=false
-svg/scale=1.0
+svg/scale=0.5

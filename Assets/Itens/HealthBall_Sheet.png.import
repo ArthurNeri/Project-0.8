@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite walk right 2.png-e9a976c8cb1c752f3b12edf740efb55d.stex"
+path="res://.import/HealthBall_Sheet.png-e3f8044c36f340e425545184131db653.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite walk right 2.png"
-dest_files=[ "res://.import/Sprite walk right 2.png-e9a976c8cb1c752f3b12edf740efb55d.stex" ]
+source_file="res://Assets/Itens/HealthBall_Sheet.png"
+dest_files=[ "res://.import/HealthBall_Sheet.png-e3f8044c36f340e425545184131db653.stex" ]
 
 [params]
 
@@ -32,4 +32,4 @@ process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=false
-svg/scale=0.5
+svg/scale=1.0

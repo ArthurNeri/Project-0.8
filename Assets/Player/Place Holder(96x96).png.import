@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/New Zero Eight.png-fe95c6ad2b662bb7f197a81a9b6ee8ac.stex"
+path="res://.import/Place Holder(96x96).png-328bd4629e9accb40af14de4206f351c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Zero Eight.png"
-dest_files=[ "res://.import/New Zero Eight.png-fe95c6ad2b662bb7f197a81a9b6ee8ac.stex" ]
+source_file="res://Assets/Player/Place Holder(96x96).png"
+dest_files=[ "res://.import/Place Holder(96x96).png-328bd4629e9accb40af14de4206f351c.stex" ]
 
 [params]
 
@@ -32,4 +32,4 @@ process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=false
-svg/scale=1.5
+svg/scale=1.0
