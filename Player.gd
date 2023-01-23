@@ -10,6 +10,7 @@ export (int) var FRICION = 80
 export (int) var ACCELERATION = 80
 export (int) var GRAVITY = 30
 export (int) var ADDITIONAL_FALL_GRAVITY = 25
+var HEALTH = 5
 #export (int) var ROLL_SPEED = 200
 
 var is_paused = false

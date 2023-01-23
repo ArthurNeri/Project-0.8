@@ -1,20 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://08.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player_Zero-Oito.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=3]
 [ext_resource path="res://0.1-Scene.tscn" type="PackedScene" id=4]
 [ext_resource path="res://HealthBall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://StatusPlayer.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -258, -4 )
+position = Vector2( -257, 1 )
 GRAVITY = 28
 ADDITIONAL_FALL_GRAVITY = 30
-
-[node name="HealthBall" parent="Player" instance=ExtResource( 5 )]
-position = Vector2( 99, -8 )
 
 [node name="Spikes" parent="." instance=ExtResource( 3 )]
 position = Vector2( -112, -144 )
@@ -27,3 +25,8 @@ position = Vector2( 4, 1 )
 tile_data = PoolIntArray( -327690, 0, 0, -327689, 0, 0, -262157, 0, 0, -262154, 1, 0, -262153, 1, 0, -196621, 1, 0, -196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262141, 0, 0, -262140, 0, 0, -131085, 1, 0, -196601, 0, 0, -65549, 1, 0, -13, 1, 0, 65523, 1, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 131061, 1, 0, 131062, 1, 0, 131063, 1, 0, 131064, 1, 0, 131065, 1, 0, 131066, 1, 0, 131067, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 196599, 1, 0, 196600, 1, 0, 196601, 1, 0, 196603, 1, 0, 196604, 1, 0, 196605, 1, 0, 196606, 1, 0, 196607, 1, 0, 131072, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131080, 1, 0, 131081, 1, 0, 262135, 1, 0, 262141, 1, 0, 262142, 1, 0, 196611, 1, 0, 196613, 1, 0, 196617, 1, 0, 327677, 1, 0 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 2 )]
+
+[node name="HealthBall" parent="." instance=ExtResource( 5 )]
+position = Vector2( -159, -12 )
+
+[node name="PlayerStatus" parent="." instance=ExtResource( 6 )]
