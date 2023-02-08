@@ -16,7 +16,7 @@ export (int) var ROLL_SPEED = 440
 
 
 ###STATE_LIST###
-enum {
+enum State{
 	MOVE,
 	ATTACK,
 	ROLL,
@@ -26,7 +26,7 @@ enum {
 #}
 
 ###BASIC_VAR###
-#var state = MOVE
+var state = State.MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.LEFT
 var double_jump = 1

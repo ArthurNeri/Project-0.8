@@ -12,6 +12,7 @@ func set_is_paused(value):
 	visible = is_paused
 
 func _on_Resume_pressed():
+	print("opa")
 	self.is_paused = false
 
 func _on_Quit_pressed():

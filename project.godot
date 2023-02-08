@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Player.gd"
+"path": "res://Assets/Player/Player.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Player2",
 "language": "GDScript",
-"path": "res://Player2(REMONTADO).gd"
+"path": "res://Assets/Player/Player2(REMONTADO).gd"
 } ]
 _global_script_class_icons={
 "Player": "",

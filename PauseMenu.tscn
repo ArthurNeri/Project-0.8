@@ -3,6 +3,7 @@
 [ext_resource path="res://PauseMenu.gd" type="Script" id=1]
 
 [node name="GUI" type="CanvasLayer"]
+pause_mode = 2
 
 [node name="PauseMenu" type="Control" parent="."]
 pause_mode = 2
@@ -39,8 +40,8 @@ margin_top = 21.0
 margin_right = 100.0
 margin_bottom = 41.0
 rect_min_size = Vector2( 100, 0 )
-hint_tooltip = "Go back to the game!"
 mouse_default_cursor_shape = 2
+action_mode = 0
 text = "Resume"
 
 [node name="Quit" type="Button" parent="PauseMenu/CenterContainer/VBoxContainer"]

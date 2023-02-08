@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Enemies/Enemy.png" type="Texture" id=1]
+[ext_resource path="res://Enemy-1.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 33.0151
+
+[node name="Node2D" type="KinematicBody2D"]
+position = Vector2( 0, -30 )
+scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

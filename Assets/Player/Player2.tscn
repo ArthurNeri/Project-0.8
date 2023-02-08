@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Player2(REMONTADO).gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprite walk right 2.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Place Holder.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Player/Player2(REMONTADO).gd" type="Script" id=1]
+[ext_resource path="res://Assets/Player/Sprite walk right 2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Player/Place Holder.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )

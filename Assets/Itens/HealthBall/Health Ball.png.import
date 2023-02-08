@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Health Ball.png-84e40a2981c905b3086a308da1b2d29c.stex"
+path="res://.import/Health Ball.png-8e07a77b9dbc5e6879bb25c754f6b33f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Itens/Health Ball.png"
-dest_files=[ "res://.import/Health Ball.png-84e40a2981c905b3086a308da1b2d29c.stex" ]
+source_file="res://Assets/Itens/HealthBall/Health Ball.png"
+dest_files=[ "res://.import/Health Ball.png-8e07a77b9dbc5e6879bb25c754f6b33f.stex" ]
 
 [params]
 
