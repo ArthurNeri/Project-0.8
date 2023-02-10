@@ -1,6 +1,6 @@
-extends Node
+extends CanvasLayer
 
-var state_machine
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

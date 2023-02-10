@@ -1,5 +1,5 @@
 extends KinematicBody2D
-class_name Player
+class_name OldPlayer
 
 
 export(int) var JUMP_FORCE = -600
@@ -50,13 +50,14 @@ func _physics_process(delta):
 		if Input.is_action_just_released("ui_up") and velocity.y < JUMP_RELEASE_FORCE:
 			velocity.y = JUMP_RELEASE_FORCE
 		
+		if velocity.y > 0:
+			velocity.y += ADDITIONAL_FALL_GRAVITY
+
 #		rolar:
 #			
 #		if Input.is_action_just_pressed("ui_roll"):
 #			velocity.x = roll_vector * ROLL_SPEED
 			
-		if velocity.y > 0:
-			velocity.y += ADDITIONAL_FALL_GRAVITY
 
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
