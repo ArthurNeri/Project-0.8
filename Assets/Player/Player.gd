@@ -202,4 +202,8 @@ func _move_and_slide():
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func health():
-	
+	pass
+
+
+func _on_HealthBall_HP_UP(old_value, new_value):
+	pass

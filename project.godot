@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "HP_Ball",
+"language": "GDScript",
+"path": "res://Assets/Itens/HealthBall/HealthBall.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "OldPlayer",
 "language": "GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://Assets/Player/Player2(REMONTADO).gd"
 } ]
 _global_script_class_icons={
+"HP_Ball": "",
 "OldPlayer": "",
 "Player": "",
 "Player2": ""

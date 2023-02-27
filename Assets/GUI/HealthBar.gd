@@ -1,5 +1,7 @@
 extends ProgressBar
 
-
 func _ready():
-	pass # Replace with function body.
+	print(" ")
+
+func _process(delta):
+	pass

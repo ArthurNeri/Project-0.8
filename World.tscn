@@ -57,3 +57,6 @@ follow_viewport_enable = false
 layer = -1
 scroll_offset = Vector2( 10, 10 )
 scroll_base_offset = Vector2( 100, 100 )
+
+[connection signal="HP_UP" from="HealthBall" to="Player" method="_on_HealthBall_HP_UP"]
+[connection signal="body_entered" from="HealthBall" to="Player" method="_on_HealthBall_body_entered"]
