@@ -35,33 +35,33 @@ var double_jump = 1
 ###FUNCTION_MOVEMENTS###
 func _physics_process(delta):
 	apply_gravity()
-	var input = Vector2.ZERO
-	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	var velocity = Vector2.ZERO
+	velocity.x = velocity.get_action_strength("ui_right") - velocity.get_action_strength("ui_left")
 
-#	if Input.is_action_just_pressed("ui_roll"):
+#	if velocity.is_action_just_pressed("ui_roll"):
 #		apply_roll()
 
-	if input.x == 0:
+	if velocity.x == 0:
 		apply_friction()
 		$AnimatedSprite.animation = "Idle"
 	else:
-		apply_acceleration(input.x)
+		apply_acceleration(velocity.x)
 		$AnimatedSprite.animation = "Walk"
 		
-		if input.x > 0:
+		if velocity.x > 0:
 			$AnimatedSprite.flip_h = false
-		elif input.x < 0:
+		elif velocity.x < 0:
 			$AnimatedSprite.flip_h = true
 	
 	if is_on_floor():
-		if Input.is_action_just_pressed("ui_up"):
+		if velocity.is_action_just_pressed("ui_up"):
 			velocity.y = JUMP_FORCE
 			
 #		rolar:
 #			
 #	else:
 		#$AnimatedSprite.animation = "Jump"
-#		if Input.is_action_just_released("ui_up") and velocity.y < JUMP_RELEASE_FORCE:
+#		if velocity.is_action_just_released("ui_up") and velocity.y < JUMP_RELEASE_FORCE:
 #			velocity.y = JUMP_RELEASE_FORCE
 			
 			
@@ -106,9 +106,9 @@ func apply_acceleration(amount):
 #			jump_state()
 
 #func move_state():
-#	var input = Vector2.ZERO
-#	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-#	input = input.normalized()
+#	var velocity = Vector2.ZERO
+#	velocity.x = velocity.get_action_strength("ui_right") - velocity.get_action_strength("ui_left")
+#	velocity = velocity.normalized()
 
 
 

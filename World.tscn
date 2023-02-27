@@ -47,6 +47,7 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="Pause" parent="Player/Camera2D2" instance=ExtResource( 2 )]
+layer = 2
 follow_viewport_enable = false
 
 [node name="PlayerStatus" parent="Player/Camera2D2" instance=ExtResource( 6 )]

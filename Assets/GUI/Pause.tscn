@@ -31,23 +31,32 @@ margin_bottom = 20.0
 mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
-margin_top = 1.0
-margin_right = 97.0
-margin_bottom = 39.0
+margin_right = 100.0
+margin_bottom = 62.0
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer"]
-margin_right = 97.0
+margin_right = 100.0
 margin_bottom = 14.0
 text = "Menu"
 align = 1
 
 [node name="Button" type="Button" parent="Control/CenterContainer/VBoxContainer"]
 pause_mode = 2
+light_mask = 3
 margin_top = 18.0
-margin_right = 97.0
+margin_right = 100.0
 margin_bottom = 38.0
-mouse_filter = 2
+mouse_default_cursor_shape = 2
 text = "Bogos Binted"
 
+[node name="Button2" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+pause_mode = 2
+margin_top = 42.0
+margin_right = 100.0
+margin_bottom = 62.0
+mouse_default_cursor_shape = 2
+text = "Mama Mya :O"
+
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Button" to="Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Button2" to="Control" method="_on_Button2_pressed"]
