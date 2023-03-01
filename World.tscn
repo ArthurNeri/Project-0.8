@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Player/Zero-Oito.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/GUI/Pause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=3]
 [ext_resource path="res://0.1-Scene.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemy-1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://StatusPlayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Itens/HealthBall/HealthBall.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/Enviroment/sky.png" type="Texture" id=8]
+[ext_resource path="res://HP Bar.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Energy Bar.tscn" type="PackedScene" id=10]
 
 [node name="World" type="Node2D"]
 position = Vector2( 0, 1 )
@@ -50,13 +51,21 @@ smoothing_speed = 10.0
 layer = 2
 follow_viewport_enable = false
 
-[node name="PlayerStatus" parent="Player/Camera2D2" instance=ExtResource( 6 )]
-follow_viewport_enable = false
+[node name="TextureProgress" parent="Player/Camera2D2" instance=ExtResource( 10 )]
+margin_left = -237.0
+margin_top = -109.0
+margin_right = -112.0
+margin_bottom = -102.0
+
+[node name="HP Bar" parent="Player/Camera2D2" instance=ExtResource( 9 )]
+margin_left = -240.0
+margin_top = -130.0
+margin_right = -152.0
+margin_bottom = -110.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -1
 scroll_offset = Vector2( 10, 10 )
 scroll_base_offset = Vector2( 100, 100 )
 
-[connection signal="HP_UP" from="HealthBall" to="Player" method="_on_HealthBall_HP_UP"]
 [connection signal="body_entered" from="HealthBall" to="Player" method="_on_HealthBall_body_entered"]

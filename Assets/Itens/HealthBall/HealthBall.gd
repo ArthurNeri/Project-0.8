@@ -1,7 +1,4 @@
 extends Area2D
-class_name HP_Ball
-
-signal HP_UP(old_value, new_value)
 
 #var HP = 5
 

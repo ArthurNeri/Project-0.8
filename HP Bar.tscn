@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.568627, 0.254902, 0.705882, 1 )
+draw_center = false
+skew = Vector2( 0.5, 0 )
+border_width_left = 6
+border_width_top = 2
+border_color = Color( 0.752941, 0.2, 1, 1 )
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.584314, 0.176471, 0.788235, 1 )
+skew = Vector2( 0.5, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.392157, 0.0705882, 0.615686, 1 )
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[node name="TextureProgress" type="ProgressBar"]
+material = SubResource( 1 )
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 104.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 0.355043, 0, 0.616211, 1 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+value = 100.0
+rounded = true
+percent_visible = false
