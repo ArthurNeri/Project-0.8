@@ -51,17 +51,18 @@ smoothing_speed = 10.0
 layer = 2
 follow_viewport_enable = false
 
-[node name="TextureProgress" parent="Player/Camera2D2" instance=ExtResource( 10 )]
+[node name="HP Bar" parent="Player/Camera2D2" instance=ExtResource( 9 )]
+margin_left = -234.0
+margin_top = -129.0
+margin_right = -146.0
+margin_bottom = -109.0
+
+[node name="Energy Bar" parent="Player/Camera2D2" instance=ExtResource( 10 )]
 margin_left = -237.0
 margin_top = -109.0
 margin_right = -112.0
 margin_bottom = -102.0
-
-[node name="HP Bar" parent="Player/Camera2D2" instance=ExtResource( 9 )]
-margin_left = -240.0
-margin_top = -130.0
-margin_right = -152.0
-margin_bottom = -110.0
+value = 50.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -1
